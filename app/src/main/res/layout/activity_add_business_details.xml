@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".activity.AddBusinessDetailsActivity">
+<include
+    android:id="@+id/inToolbar"
+    layout="@layout/item_custom_toolbar"/>
+
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nsvScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/btnNext"
+    android:layout_below="@+id/inToolbar"
+    android:layout_marginHorizontal="@dimen/dimen_20"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_44"
+            android:background="@drawable/bg_spinner_outline"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/ssBusinessType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:padding="0dp"/>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tin_Business_Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:textColorHint="@color/light_888888"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6"
+            app:boxStrokeColor="@color/black_172920"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBusinessName"
+                style="@style/et_login_black_16sp_lato_medium"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/business_name"
+                android:inputType="textCapWords"
+                android:padding="8dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:textColorHint="@color/light_888888"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6"
+            app:boxStrokeColor="@color/black_172920"
+            android:id="@+id/tin_Email_Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBusinessemail"
+                style="@style/et_login_black_16sp_lato_medium"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/business_email"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/dimen_8" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:textColorHint="@color/light_888888"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6"
+            app:boxStrokeColor="@color/black_172920"
+            android:id="@+id/tin_Trading_Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTradingName"
+                style="@style/et_login_black_16sp_lato_medium"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/trading_name"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/dimen_8" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_44"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:background="@drawable/bg_spinner_outline"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/ssTypeOfBusiness"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:padding="0dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/btnNext"
+    style="@style/btn_login_white_18sp_cera_pro_medium"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_44"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="@dimen/dimen_20"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:layout_marginEnd="@dimen/dimen_20"
+    android:layout_marginBottom="@dimen/dimen_20"
+    android:background="@drawable/bg_btn_primary"
+    android:gravity="center"
+    android:text="@string/next" />
+
+</RelativeLayout>

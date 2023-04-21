@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.OtpVerificationActivity">
+
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/ivLogo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/dimen_84"
+    android:src="@drawable/ic_login_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOtpVerification"
+        style="@style/et_header_orange_F89858_20sp_circularstdblack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLogo"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dimen_80"
+        android:text="@string/otp_verification" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tvSecureApp"
+    style="@style/pin_desc_light_888888_14sp_circularstdbook"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tvOtpVerification"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/dimen_14"
+    android:text="@string/pls_send_digit_otp"
+    android:textAlignment="center" />
+
+<RelativeLayout
+    android:id="@+id/rlDigitCode"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tvSecureApp"
+    android:layout_marginHorizontal="@dimen/dimen_22"
+    android:layout_marginTop="@dimen/dimen_38"
+    android:gravity="center">
+
+<!--    <androidx.appcompat.widget.AppCompatEditText-->
+<!--        android:id="@+id/etOne"-->
+<!--        style="@style/set_pin_black_191919_21sp_circularstdbook"-->
+<!--        android:layout_width="@dimen/dimen_44"-->
+<!--        android:layout_height="@dimen/dimen_44"-->
+<!--        android:layout_marginEnd="@dimen/dimen_2"-->
+<!--        android:background="@drawable/bg_enter_pin"-->
+<!--        android:gravity="center"-->
+<!--        android:inputType="number"-->
+<!--        android:singleLine="true"-->
+<!--        android:maxLength="1" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatEditText-->
+<!--        android:id="@+id/etTwo"-->
+<!--        style="@style/set_pin_black_191919_21sp_circularstdbook"-->
+<!--        android:layout_width="@dimen/dimen_44"-->
+<!--        android:layout_height="@dimen/dimen_44"-->
+<!--        android:layout_marginHorizontal="@dimen/dimen_2"-->
+<!--        android:layout_toEndOf="@+id/etOne"-->
+<!--        android:background="@drawable/bg_enter_pin"-->
+<!--        android:gravity="center"-->
+<!--        android:inputType="number"-->
+<!--        android:singleLine="true"-->
+<!--        android:maxLength="1" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatEditText-->
+<!--        android:id="@+id/etThree"-->
+<!--        style="@style/set_pin_black_191919_21sp_circularstdbook"-->
+<!--        android:layout_width="@dimen/dimen_44"-->
+<!--        android:layout_height="@dimen/dimen_44"-->
+<!--        android:layout_marginHorizontal="@dimen/dimen_2"-->
+<!--        android:layout_toEndOf="@+id/etTwo"-->
+<!--        android:background="@drawable/bg_enter_pin"-->
+<!--        android:gravity="center"-->
+<!--        android:inputType="number"-->
+<!--        android:singleLine="true"-->
+<!--        android:maxLength="1" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatEditText-->
+<!--        android:id="@+id/etFour"-->
+<!--        style="@style/set_pin_black_191919_21sp_circularstdbook"-->
+<!--        android:layout_width="@dimen/dimen_44"-->
+<!--        android:layout_height="@dimen/dimen_44"-->
+<!--        android:layout_marginHorizontal="@dimen/dimen_2"-->
+<!--        android:layout_toEndOf="@+id/etThree"-->
+<!--        android:background="@drawable/bg_enter_pin"-->
+<!--        android:gravity="center"-->
+<!--        android:inputType="number"-->
+<!--        android:singleLine="true"-->
+<!--        android:maxLength="1" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatEditText-->
+<!--        android:id="@+id/etFive"-->
+<!--        style="@style/set_pin_black_191919_21sp_circularstdbook"-->
+<!--        android:layout_width="@dimen/dimen_44"-->
+<!--        android:layout_height="@dimen/dimen_44"-->
+<!--        android:layout_marginHorizontal="@dimen/dimen_2"-->
+<!--        android:layout_toEndOf="@+id/etFour"-->
+<!--        android:background="@drawable/bg_enter_pin"-->
+<!--        android:gravity="center"-->
+<!--        android:inputType="number"-->
+<!--        android:singleLine="true"-->
+<!--        android:maxLength="1" />-->
+
+<!--    <androidx.appcompat.widget.AppCompatEditText-->
+<!--        android:id="@+id/etSix"-->
+<!--        style="@style/set_pin_black_191919_21sp_circularstdbook"-->
+<!--        android:layout_width="@dimen/dimen_44"-->
+<!--        android:layout_height="@dimen/dimen_44"-->
+<!--        android:layout_marginStart="@dimen/dimen_2"-->
+<!--        android:layout_toEndOf="@+id/etFive"-->
+<!--        android:background="@drawable/bg_enter_pin"-->
+<!--        android:gravity="center"-->
+<!--        android:inputType="number"-->
+<!--        android:singleLine="true"-->
+<!--        android:maxLength="1" />-->
+
+    <com.chaos.view.PinView
+        android:id="@+id/PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:inputType="number"
+        style="@style/PinWidget.PinView"
+        android:itemBackground="@drawable/bg_enter_pin"
+        app:itemCount="6"
+        app:itemRadius="20dp"
+        app:itemSpacing="6dp"
+        android:cursorVisible="true"
+        app:lineColor="@color/light_F1F1F1" />
+
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTitlError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@+id/rlDigitCode"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/red"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:fontFamily="@font/lato_bold"
+        android:text="Wrong OTP"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tvTitlError"
+    android:layout_marginTop="@dimen/dimen_40"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNotReceivedOTP"
+        style="@style/pin_desc_light_888888_14sp_circularstdbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/didnt_receive_otp" />
+
+    <LinearLayout
+        android:id="@+id/LlReSendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tvNotReceivedOTP"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvResendOTP"
+            style="@style/resend_otp_blue_36A4DD_15sp_circularstdbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:text="@string/resend_otp" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+<LinearLayout
+    android:id="@+id/LlChangeMobileNo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/btnVerify"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="@dimen/dimen_20"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvChangeMobileNo"
+        style="@style/resend_otp_blue_36A4DD_15sp_circularstdbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_mobile_number" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/blue_36A4DD" />
+
+</LinearLayout>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/btnVerify"
+    style="@style/btn_login_white_18sp_cera_pro_medium"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_44"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="@dimen/dimen_20"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:layout_marginEnd="@dimen/dimen_20"
+    android:layout_marginBottom="@dimen/dimen_20"
+    android:background="@drawable/bg_btn_primary"
+    android:gravity="center"
+    android:text="@string/verify" />
+
+</RelativeLayout>

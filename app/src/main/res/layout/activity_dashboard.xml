@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/drawer"
+        tools:context=".activity.DashboardActivity">
+
+        <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tag="@string/tag_menu">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#d5f2cc"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Rl_Logout"
+                    android:layout_width="217dp"
+                    android:layout_height="52dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/icone"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/logout" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/icone"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvLogout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:text="Logout"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </nl.psdcompany.duonavigationdrawer.views.DuoMenuView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="200dp"
+            app:cardBackgroundColor="@color/screen_bg"
+            android:tag="content"
+            android:visibility="visible">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/Rltoolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="79dp"
+                    android:background="#172920">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#172920"
+                    android:layout_centerVertical="true"
+                    app:title="   "
+                    app:subtitle="  "
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    app:navigationIcon="@drawable/ic_navigation">
+
+                </androidx.appcompat.widget.Toolbar>
+
+                    <ImageView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_title" />
+
+                    <ImageView
+                        android:id="@+id/ImgNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        android:src="@drawable/notification" />
+                </RelativeLayout>
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/Rltoolbar"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_20"
+                            android:layout_marginTop="20dp"
+                           android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvCompany"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="14dp"
+                                android:layout_toRightOf="@+id/img_toolbarlogo"
+                                android:fontFamily="@font/cera_pro_bold"
+                                android:text="Company Name"
+                                android:textColor="#172920"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="21dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="19dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/LlCompanyDetails"
+                                    android:layout_width="172dp"
+                                    android:layout_height="176dp"
+                                    android:layout_marginRight="12sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_company_details"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="64dp"
+                                        android:layout_height="74dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_compnay_de"></ImageView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginHorizontal="5dp"
+                                        android:layout_marginTop="23dp"
+                                        android:fontFamily="@font/cera_pro_medium"
+                                        android:text="Company Details"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/LlHelthAndSefty"
+                                    android:layout_width="172dp"
+                                    android:layout_height="176dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_company_details"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="64dp"
+                                        android:layout_height="74dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_helath_sefty"></ImageView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="5dp"
+                                        android:layout_marginTop="23dp"
+                                        android:fontFamily="@font/cera_pro_medium"
+                                        android:text="Health &amp; Safety Certificate"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="19dp"
+                                android:layout_marginTop="21dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/Ll_Temprature_Records"
+                                    android:layout_width="172dp"
+                                    android:layout_height="176dp"
+                                    android:layout_marginRight="12sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_company_details"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="64dp"
+                                        android:layout_height="74dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_temrature"></ImageView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginHorizontal="5dp"
+                                        android:layout_marginTop="23dp"
+                                        android:fontFamily="@font/cera_pro_medium"
+                                        android:text="Temperature Records"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/LlOpeningClosingChecks"
+                                    android:layout_width="172dp"
+                                    android:layout_height="176dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_company_details"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="64dp"
+                                        android:layout_height="74dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_open_closing"></ImageView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginHorizontal="5dp"
+                                        android:layout_marginTop="23dp"
+                                        android:fontFamily="@font/cera_pro_medium"
+                                        android:text="Opening &amp;\n Closing Checks"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="19dp"
+                                android:layout_marginTop="21dp"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/LlSalesCostTracker"
+                                    android:layout_width="172dp"
+                                    android:layout_height="176dp"
+                                    android:layout_marginRight="12sp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_company_details"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="64dp"
+                                        android:layout_height="74dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_selas"></ImageView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginHorizontal="5dp"
+                                        android:layout_marginTop="23dp"
+                                        android:fontFamily="@font/cera_pro_medium"
+                                        android:text="Sales/Cost Tracker"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/LlTodo"
+                                    android:layout_width="172dp"
+                                    android:layout_height="176dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/ic_company_details"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="64dp"
+                                        android:layout_height="74dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_todolist"></ImageView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginHorizontal="5dp"
+                                        android:layout_marginTop="23dp"
+                                        android:fontFamily="@font/cera_pro_medium"
+                                        android:text="To Do List"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>
+

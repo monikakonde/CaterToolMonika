@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#F8F8F8"
+android:orientation="vertical"
+tools:context=".activity.OpeninigClosingChecksActivity">
+
+<include
+    android:id="@+id/inToolbar"
+    layout="@layout/item_custom_toolbar" />
+
+<com.google.android.material.tabs.TabLayout
+    android:id="@+id/tabLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/inToolbar"
+    app:tabIndicatorColor="@color/green_8FBD27"
+    app:tabSelectedTextColor="@color/green_8FBD27"
+    app:tabTextAppearance="@style/CustomTextAppearanceTab">
+
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opening Checks" />
+
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Closing Checks" />
+
+</com.google.android.material.tabs.TabLayout>
+
+<ScrollView
+    android:id="@+id/svOpeningChecks"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/tabLayout"
+    android:visibility="visible">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="24dp"
+        android:layout_below="@+id/tabLayout"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/single_check_list"/>
+
+        <TextView
+            android:id="@+id/tvAddOpeningChecks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/BottomSheetStyle"
+            android:text="Add New Opening Check"
+            android:drawablePadding="16dp"
+            android:drawableEnd="@drawable/baseline_add_24"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:textColor="#F89858"
+            android:textSize="18sp"
+            android:fontFamily="@font/cera_pro_medium"/>
+
+    </LinearLayout>
+
+</ScrollView>
+</RelativeLayout>

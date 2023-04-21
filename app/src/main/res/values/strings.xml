@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">CaterTool</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="passcode">Passcode</string>
+    <string name="login">Login</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="new_user">New User</string>
+
+    <string name="user_details">User Details</string>
+    <string name="one">1</string>
+    <string name="slash">/</string>
+    <string name="two">/2</string>
+    <string name="three">/3</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="confirm_email">Confirm Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_passcode">Confirm Passcode</string>
+    <string name="next">Next</string>
+    <string name="loading">Loading…</string>
+    <string name="business_email">Business Email</string>
+    <string name="add_user">Add User</string>
+    <string name="access_permission">Access Permission</string>
+    <string name="company_details">Company\nDetails</string>
+    <string name="health_safety">Health &amp; Safety\nCertificate</string>
+    <string name="opening_closing">Opening &amp;\nClosing Checks</string>
+    <string name="temperature_records">Temperature\n Records</string>
+    <string name="sales_cost">Sales/Cost\nTracker</string>
+    <string name="to_do_list">To Do\nList</string>
+    <string name="add">Add</string>
+
+    <string name="change_password">Change Password</string>
+    <string name="save">Save</string>
+
+    <string name="click_to_add_user">Click to add user</string>
+    <string name="no_user_user">No User Added</string>
+
+    <string name="company_name">Company Name</string>
+    <string name="limited_company">Limited company</string>
+    <string name="edit">Edit</string>
+
+    <string name="enter_m_pin">Enter M-PIN</string>
+    <string name="secure_your_app">Secure Your App Data By Setting Up M-PIN And Use M-PIN Every time To Access The App</string>
+    <string name="continues">Continue</string>
+
+    <string name="confirm_m_pin">Confirm M-PIN</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="do_you_to_set_m_pin">Do you want to set M-PIN?</string>
+    <string name="cancel">Cancel</string>
+    <string name="set_m_pin">Set M-PIN</string>
+
+    <string name="thank_you">Thank you!\nFor Registration</string>
+    <string name="verification_successful">Verification Successful</string>
+
+    <string name="Welcome">Welcome</string>
+    <string name="to_a_easier_way_of_catering">to a easier way of catering</string>
+
+    <string name="details_updated">Details Updated</string>
+    <string name="please_note_it_can_take_up_to_48_hours">Please note it can take up to 48 hours for changes to effect across all our systems</string>
+
+    <string name="otp_verification">OTP Verification</string>
+    <string name="pls_send_digit_otp">Please enter 4 digit code sent to you\nat demo@info.com</string>
+    <string name="didnt_receive_otp">Did not Receive OTP?</string>
+    <string name="resend_otp"><u>Resend OTP</u></string>
+    <string name="change_mobile_number">Change mobile number?</string>
+    <string name="verify">Verify</string>
+
+    <string name="company_detail">Company Details</string>
+    <string name="opening_closig">Opening &amp; Closing Checks</string>
+    <string name="sales_costt">Sales/Cost Tracker</string>
+    <string name="temperature_record">Temperature Records</string>
+
+    <string name="business_name">Business Name</string>
+    <string name="trading_name">Trading Name</string>
+    <string name="upload_company_logo">Upload Company Logo</string>
+    <string name="postcode">Postcode</string>
+    <string name="company_address">Company Address</string>
+    <string name="find_by_postcode">Find By Postcode</string>
+    <string name="EnterAddressManually">Enter Address Manually</string>
+    <string name="postal_address">Postal Address</string>
+    <string name="address">1 Stanley road, Southampton, Hampshire SO17 2LW, United kingdom</string>
+    <string name="address_1">Address Line 1</string>
+    <string name="address_2">Address Line 2</string>
+    <string name="town">Town</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="enter_address_manually">Enter Address Manually</string>
+    <string name="verify_login">Verify &amp; login</string>
+    <string name="submit">Submit</string>
+
+    <string name="submit_changes">Submit Changes</string>
+    <string name="current_email_address">Current Email Address</string>
+    <string name="new_email_address">New Email Address</string>
+    <string name="confirm_email_address">Confirm Email Address</string>
+
+    <string name="title">Title</string>
+    <string name="notes">Notes</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+
+    <string name="business_details">Business Details</string>
+    <string name="change_email">Change Email</string>
+    <string name="to_do">To Do</string>
+    <string name="add_to_do">Add To Do</string>
+    <string name="company">Company</string>
+    <string name="_1_789_987_7899">+1 789 987 7899</string>
+    <string name="loremipsum_gmail_com">Loremipsum@gmail.com</string>
+    <string name="term_conditions"><u>Terms &amp; Conditions</u></string>
+    <string name="title_activity_jlogin">J_LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="err_password">The password should contain at least 6 characters or Numbers</string>
+    <string name="err_password_confirmation">"Passcode Doesn\'t Match"</string>
+    <string name="err_email_confirmation">"Email Doesn\'t Match"</string>
+    <string name="invalid_firstname">"Enter First Name"</string>
+    <string name="Pleasefillvaliddata">"Please fill valid data "</string>
+    <string name="invalidBusinessName">"Enter Business Name"</string>
+    <string name="invalidEmailName">"Enter Email ID"</string>
+    <string name="invalidTradingName">"Enter Trading Name"</string>
+    <string name="invalid_lastname">"Enter Last Name"</string>
+    <string name="err_tel">"Enter Correct Mobile Number"</string>
+    <string name="err_email">"Enter Valid Email"</string>
+    <string name="checkBox">"checkBox"</string>
+    <string name="name">"name"</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="totalCartValue_">£ %.00f</string>
+    <string name="totalCartValue">£ %s</string>
+</resources>

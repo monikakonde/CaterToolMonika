@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/dimen_20"
+    android:orientation="vertical"
+    android:id="@+id/ll"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="50dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvAddOpeningChecks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Opening Check"
+            android:textColor="#191919"
+            android:textSize="18sp"
+            android:fontFamily="@font/cera_pro_bold"/>
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_close_24"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColorHint="@color/light_888888"
+        app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+        app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+        app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+        app:boxCornerRadiusTopStart="@dimen/dimen_6"
+        android:layout_marginTop="30dp"
+        app:boxStrokeColor="@color/black_172920">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOpeningChecks"
+            style="@style/et_login_black_16sp_lato_medium"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="Opening Checks"
+            android:inputType="textMultiLine"
+            android:text=" "
+            android:gravity="start|top"
+            android:paddingTop="10dp"
+            android:lines="5"
+            android:padding="@dimen/dimen_8" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btnChecksadd"
+        style="@style/btn_login_white_18sp_cera_pro_medium"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_44"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_btn_primary"
+        android:backgroundTint="#8FCE1B"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dimen_16"
+        android:text="Add" />
+
+</LinearLayout>

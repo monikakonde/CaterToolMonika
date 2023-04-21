@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".activity.UserRegister">
+
+    <include
+        android:id="@+id/inToolbar"
+        layout="@layout/item_custom_toolbar" />
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/btnNext"
+    android:layout_below="@+id/inToolbar"
+    android:layout_marginHorizontal="@dimen/dimen_20"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFirstName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_6"
+                android:layout_weight="1"
+                android:textColorHint="@color/light_888888"
+                app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+                app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+                app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+                app:boxCornerRadiusTopStart="@dimen/dimen_6"
+                app:boxStrokeColor="@color/black_172920"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFirstName"
+                    style="@style/et_login_black_16sp_lato_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="@string/first_name"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/dimen_8"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilLastName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_6"
+                android:layout_weight="1"
+                android:textColorHint="@color/light_888888"
+                app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+                app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+                app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+                app:boxCornerRadiusTopStart="@dimen/dimen_6"
+                app:boxStrokeColor="@color/black_172920"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLastName"
+                    style="@style/et_login_black_16sp_lato_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="@string/last_name"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/dimen_8" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMobile"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/light_888888"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6"
+            app:boxStrokeColor="@color/black_172920"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMobile"
+                style="@style/et_login_black_16sp_lato_medium"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/mobile"
+                android:inputType="phone"
+                android:padding="@dimen/dimen_8" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/light_888888"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6"
+            app:boxStrokeColor="@color/black_172920"
+            app:passwordToggleEnabled="true"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                style="@style/et_login_black_16sp_lato_medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/passcode"
+                android:inputType="textPassword"
+                android:padding="@dimen/dimen_8" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilConfirmPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/light_888888"
+            app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+            app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+            app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+            app:boxCornerRadiusTopStart="@dimen/dimen_6"
+            app:boxStrokeColor="@color/black_172920"
+            app:passwordToggleEnabled="true"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConfirmPassword"
+                style="@style/et_login_black_16sp_lato_medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/confirm_passcode"
+                android:inputType="textPassword"
+                android:padding="@dimen/dimen_8" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/btnNext"
+    style="@style/btn_login_white_18sp_cera_pro_medium"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_44"
+    android:layout_alignParentBottom="true"
+    android:layout_marginStart="@dimen/dimen_20"
+    android:layout_marginTop="@dimen/dimen_20"
+    android:layout_marginEnd="@dimen/dimen_20"
+    android:layout_marginBottom="@dimen/dimen_20"
+    android:background="@drawable/bg_btn_primary"
+    android:gravity="center"
+    android:text="@string/next" />
+
+</RelativeLayout>

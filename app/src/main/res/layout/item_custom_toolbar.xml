@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_80"
+    android:paddingHorizontal="@dimen/dimen_20"
+    android:background="@color/black_172920">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBackImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow_back_white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHeader"
+        style="@style/header_white_18sp_cera_pro_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dimen_14"
+        android:layout_toEndOf="@id/ivBackImg"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@+id/LlScreens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            style="@style/et_header_orange_F89858_20sp_cera_pro_bold" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            style="@style/et_header_white_16sp_cera_pro_bold" />
+    </LinearLayout>
+
+</RelativeLayout>

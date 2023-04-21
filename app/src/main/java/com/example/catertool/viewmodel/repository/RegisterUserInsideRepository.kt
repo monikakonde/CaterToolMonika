@@ -1,0 +1,84 @@
+package com.example.catertool.viewmodel.repository
+
+import android.util.Log
+import androidx.lifecycle.MutableLiveData
+import com.example.catertool.model.RegisterUser
+import com.example.catertool.network.RetrofitRequest
+import com.example.catertool.network.ApiClient
+import com.tobibur.swipequotes.model.service.ApiInterface
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
+class RegisterUserInsideRepository {
+    val TAG = javaClass.simpleName
+    var endpoints: ApiClient = ApiClient()
+
+    fun performUserInsideRegister(
+        username: String,
+        email: String,
+        password: String,
+        confirmed: String,
+        blocked: String,
+        firstName: String,
+        lastName: String,
+        mobile: String,
+        allowCompanyDetails: String,
+        allowHNSUnits: String,
+        allowTemperature: String,
+        allowChecks: String,
+        allowSalesTracker: String,
+        allowToDo: String,
+        brand_details: String
+    ): MutableLiveData<RegisterUser> {
+        var apiResponse: MutableLiveData<RegisterUser> = MutableLiveData()
+
+        val apiService: ApiInterface = endpoints.getClient()!!.create(ApiInterface::class.java)
+
+        val request: Map<String, String> = RetrofitRequest.userRegisterInside(
+            username,
+            email,
+            password,
+            confirmed,
+            blocked,
+            firstName,
+            lastName,
+            mobile,
+            allowCompanyDetails,
+            allowHNSUnits,
+            allowTemperature,
+            allowChecks,
+            allowSalesTracker,
+            allowToDo,
+            brand_details
+        )
+
+        val call: Call<RegisterUser> = apiService.userRegisterInsideRequest(request)
+
+        call.enqueue(object : Callback<RegisterUser> {
+
+            override fun onResponse(call: Call<RegisterUser>, response: Response<RegisterUser>) {
+                Log.e(TAG, "onResponse response=" + response)
+
+                if (response.isSuccessful) {
+                    Log.e(TAG, "onResponse response.size=" + response.body())
+                    if (response.body() != null && response.body() != null) {
+                    }
+                } else {
+                    Log.d("onResponse", "onResponse01: ")
+
+                }
+                apiResponse.value = response.body()
+            }
+
+            override fun onFailure(call: Call<RegisterUser>, t: Throwable) {
+                Log.e(TAG, "onFailure call=" + call.toString())
+                Log.d("onResponse", "onFailure: ${t.message}")
+                t.message
+            }
+
+        })
+
+        return apiResponse
+    }
+}

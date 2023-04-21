@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/LlUers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlImageDetail"
+            android:layout_width="match_parent"
+            android:layout_height="163dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="20dp">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:id="@+id/rlNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cera_pro_medium"
+                    android:gravity="center_horizontal"
+                    android:text="Desi Tadka"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_below="@+id/tvTitle">
+
+                    <TextView
+                        android:id="@+id/tvFoodName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/cera_pro_light"
+                        android:gravity="center_horizontal"
+                        android:text="Indian Food"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/tvdot"
+                        android:layout_toRightOf="@+id/tvFoodName"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/circle_dot"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvVehicle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tvdot"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/cera_pro_light"
+                        android:gravity="center_horizontal"
+                        android:text="Van"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/img_forword"
+                    android:layout_width="@dimen/dimen_20"
+                    android:layout_height="@dimen/dimen_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                    app:tint="@color/white" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

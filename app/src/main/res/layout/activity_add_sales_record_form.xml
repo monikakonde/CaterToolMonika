@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AddSalesRecordFormActivity">
+
+    <include
+        android:id="@+id/inToolbar"
+        layout="@layout/item_custom_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlAdd"
+        android:layout_below="@+id/inToolbar"
+        android:layout_marginHorizontal="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:text="Unit Name"
+                android:textColor="#888888"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etUnitNmae"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_unit_sales_record"
+                android:fontFamily="@font/lato_medium"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ettillEventName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColorHint="@color/light_888888"
+                app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+                app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+                app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+                app:boxCornerRadiusTopStart="@dimen/dimen_6"
+                app:boxStrokeColor="@color/black_172920"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="Event Name"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/dimen_8"
+                    android:textColor="@color/black"
+                    android:textColorHint="#888888"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ettillDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/light_888888"
+                app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+                app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+                app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+                app:boxCornerRadiusTopStart="@dimen/dimen_6"
+                app:boxStrokeColor="@color/black_172920"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:drawableEnd="@drawable/ic_calender"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="Date"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/dimen_8"
+                    android:textColor="@color/black"
+                    android:textColorHint="#888888"
+                    android:textSize="15sp"
+                    app:errorEnabled="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ettillCash"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/light_888888"
+                app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+                app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+                app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+                app:boxCornerRadiusTopStart="@dimen/dimen_6"
+                app:boxStrokeColor="@color/black_172920"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="Cash"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/dimen_8"
+                    android:textColor="@color/black"
+                    android:textColorHint="#888888"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ettillCard"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/light_888888"
+                app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+                app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+                app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+                app:boxCornerRadiusTopStart="@dimen/dimen_6"
+                app:boxStrokeColor="@color/black_172920"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCard"
+                    style="@style/et_login_black_16sp_lato_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:hint="Card"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/dimen_8" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ettillOther"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/light_888888"
+                app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+                app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+                app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+                app:boxCornerRadiusTopStart="@dimen/dimen_6"
+                app:boxStrokeColor="@color/black_172920"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="Other"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/dimen_8"
+                    android:textColor="@color/black"
+                    android:textColorHint="#888888"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlAdd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_44"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_14"
+        android:layout_marginEnd="@dimen/dimen_20"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:background="@drawable/bg_btn_primary"
+        android:paddingHorizontal="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnAdd"
+            android:fontFamily="@font/cera_pro_medium"
+            android:text="Total: £"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnAdd"
+            style="@style/btn_login_white_18sp_cera_pro_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_btn_primary"
+            android:text="Add" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

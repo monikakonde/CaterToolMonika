@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AddUnitActivity">
+    <include
+        android:id="@+id/inToolbar"
+        layout="@layout/item_custom_toolbar" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:textColorHint="@color/light_888888"
+        app:boxCornerRadiusBottomEnd="@dimen/dimen_6"
+        app:boxCornerRadiusBottomStart="@dimen/dimen_6"
+        app:boxCornerRadiusTopEnd="@dimen/dimen_6"
+        app:boxCornerRadiusTopStart="@dimen/dimen_6"
+        app:boxStrokeColor="@color/black_172920">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Menu Name"
+            android:inputType="textCapSentences"
+            android:padding="@dimen/dimen_8"
+            android:textColorHint="#888888"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/lato_regular"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:weightSum="5"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3"
+            android:paddingHorizontal="20dp"
+            android:text="Dish Name"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Price"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:weightSum="5"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3"
+            android:paddingHorizontal="20dp"
+            android:fontFamily="@font/lato_medium"
+            android:background="@drawable/et_unit_sales_record"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_50"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+            android:paddingHorizontal="20dp"
+            android:fontFamily="@font/lato_medium"
+            android:background="@drawable/et_unit_sales_record"/>
+    </LinearLayout>
+</LinearLayout>
+
+</LinearLayout>
